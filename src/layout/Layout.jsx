@@ -1,11 +1,14 @@
+// Outlet is a placeholder — it renders whichever page matches the current URL
+import { Outlet } from "react-router";
 import Navbar from "./Navbar";
 
-/** The shared layout for all pages of the app */
-export default function Layout({ children }) {
+export default function Layout() {
   return (
     <>
       <Navbar />
-      <main>{children}</main>
+      <main>
+        <Outlet />
+      </main>
     </>
   );
 }
